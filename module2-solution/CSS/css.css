@@ -35,14 +35,7 @@
 		background-color: #AAA;
 		border: 2px solid black;
 	}
-		div.inner_last {
-		position: relative;
-		width: 95%;
-		margin-right: auto;
-		margin-left: auto;
-		background-color: #AAA;
-		border: 2px solid black;
-	}
+
 	p {
 		width: 90%;
 		margin-right: auto;
@@ -139,6 +132,14 @@
 		}
 		.col-md-12 {
 			width: 100%;
+		}
+		div.inner_last {
+			position: relative;
+			width: 95%;
+			margin-right: auto;
+			margin-left: auto;
+			background-color: #AAA;
+			border: 2px solid black;
 		}
 	}
 	@media  (max-width: 767px) {
