@@ -16,14 +16,28 @@
 		width: 100%;
 	}
 	h2 {
+		position: absolute;
+		top: -2px;
+		right: -18px;
 		color:black;
 		margin: 0.67em;
-		text-align: right;
+		margin-top: 0px;
 		padding-right: 32px;
 		border: 2px solid black;
+		display: inline-block;
+		text-align: right;
 	}
 	div.inner {
+		position: relative;
 		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+		background-color: #AAA;
+		border: 2px solid black;
+	}
+		div.inner_last {
+		position: relative;
+		width: 95%;
 		margin-right: auto;
 		margin-left: auto;
 		background-color: #AAA;
@@ -34,7 +48,7 @@
 		margin-right: auto;
 		margin-left: auto;
 		margin-bottom: 8px;
-		font-family: Helvetica;
+		margin-top: 38px;
 		color: black;
 	}
 	#red {background-color:red;}
