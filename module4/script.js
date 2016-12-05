@@ -28,9 +28,9 @@ Good Bye Jim*/
     var firstLetter = names[x].charAt(0).toLowerCase();
 
     if (firstLetter === "j") {
-      byeSpeaker.speak();
+      byeSpeaker.speak(names[x]);
     } else {
-      helloSpeaker.speak();
+      helloSpeaker.speak(names[x]);
     }
   }
 })();
