@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // *** start ***
 // On first load, show home view
   
-  console.log("start4");
+  console.log("start4.1");
   
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
@@ -121,15 +121,8 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName.short_name);
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", "'"+chosenCategoryShortName.short_name+"'");
       console.log("homeHtmlToInsertIntoMainPage",homeHtmlToInsertIntoMainPage);
-      /*var insertProperty = function (string, propName, propValue) {
-          var propToReplace = "{{" + propName + "}}";
-              string = string
-                .replace(new RegExp(propToReplace, "g"), propValue);
-            return string;
-}*/
-
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
