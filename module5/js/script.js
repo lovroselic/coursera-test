@@ -81,12 +81,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // *** start ***
 // On first load, show home view
   
-  console.log("start");
-  console.log(allCategoriesUrl);
+  console.log("start2");
+  
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowHomeHTML(allCategoriesUrl), // ***** <---- TODO: STEP 1: Substitute [...] ******
+  buildAndShowHomeHTML), // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitely setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -119,7 +119,7 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-      var homeHtmlToInsertIntoMainPage = insertProperty(html, "short_name", chosenCategoryShortName.short_name);
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "short_name", chosenCategoryShortName.short_name);
       console.log("homeHtmlToInsertIntoMainPage",homeHtmlToInsertIntoMainPage);
       /*var insertProperty = function (string, propName, propValue) {
           var propToReplace = "{{" + propName + "}}";
