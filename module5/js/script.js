@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // *** start ***
 // On first load, show home view
   
-  console.log("start4.1");
+  console.log("start4.2");
   
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
@@ -95,7 +95,6 @@ $ajaxUtils.sendGetRequest(
 // Builds HTML for the home page based on categories array
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
-  console.log("categories",categories);
 
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
@@ -106,8 +105,6 @@ function buildAndShowHomeHTML (categories) {
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       var chosenCategoryShortName = chooseRandomCategory(categories);
-      console.log("chosenCategoryShortName",chosenCategoryShortName);
-
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -127,7 +124,7 @@ function buildAndShowHomeHTML (categories) {
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
-      // ....
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
 
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
