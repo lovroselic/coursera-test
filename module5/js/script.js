@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // *** start ***
 // On first load, show home view
   
-  console.log("start3");
+  console.log("start4");
   
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
@@ -120,7 +120,8 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "short_name", chosenCategoryShortName.short_name);
+      
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName.short_name);
       console.log("homeHtmlToInsertIntoMainPage",homeHtmlToInsertIntoMainPage);
       /*var insertProperty = function (string, propName, propValue) {
           var propToReplace = "{{" + propName + "}}";
